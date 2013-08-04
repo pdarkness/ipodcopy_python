@@ -33,23 +33,11 @@ def copySongs(source,target):
             if len(album) > 0:
                 if windows:
                     fullpath = target+win+artist+win+album+win
-                    while fullpath.count('/') > 0:
-                        fullpath = fullpath.replace('/', '')
-                    while fullpath.count('|') > 0:
-                        fullpath = fullpath.replace('|', '')
-                    while fullpath.count('*') > 0:
-                        fullpath = fullpath.replace('*', '')
                 else:
                     fullpath = target+lin+artist+lin+album+lin
             else:
                 if windows:
                     fullpath = target+win+artist+win+"NoAlbum"+win
-                    while fullpath.count('/') > 0:
-                        fullpath = fullpath.replace('/', '')
-                    while fullpath.count('|') > 0:
-                        fullpath = fullpath.replace('|', '')
-                    while fullpath.count('*') > 0:
-                        fullpath = fullpath.replace('*', '')
                 else:
                     fullpath = target+lin+artist+lin+"NoAlbum"+lin
             fullfilepath = fullpath+filename
